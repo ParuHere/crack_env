@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crack Detector</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .half {
+    height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    float: left;
+  }
+
+  .left {
+    width: 50%;
+    background-color: lightgray;
+  }
+
+  .right {
+    width: 50%;
+    background-color: lightblue;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+
+			
+            <h2 class="mt-5">Crack Detector</h2>
+
+			<div class="half left">
+				<form method="post" action="{{ url_for('tasks') }}">
+					<input type="submit" value="Stop/Start" name="stop" />
+					<input type="submit" value="Capture" name="click"/>
+					
+					<input type="submit" value="Negative" name="neg" />
+					
+					<input type="submit" value="Start/Stop Recording" name="rec" />
+					</form>
+					<img src="{{ url_for('video_feed') }}" height="80%">
+					<h3 style="font-family:Arial, Helvetica, sans-serif;"></h3>
+					<ol style="font-family:Arial, Helvetica, sans-serif;">
+					<li>Stop/Start--Toggle between stop or start live streaming</li>
+					<li>Capture--Take still-shot and save in the 'shots' directory</li>
+					<li>Negative--Toggle between negative and RGB output</li>
+			  </div>
+			  <div class="half right">
+				Right Half Content
+			  </div>
+				
+			
+        </div>
+    </div>
+</div>
+</body>

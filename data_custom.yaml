@@ -1,0 +1,6 @@
+train: D:\crack\crack_env\train
+val: D:\crack\crack_env\val
+
+nc: 1
+
+names: ["crack"]
